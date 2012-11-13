@@ -22,7 +22,7 @@
                     <g:Image stylePrimaryName="{style.geosdiPromoIcon}" resource='{resources.geoPlatformLogo}'></g:Image>
                     <h4>Informazioni sull'applicazione Base App.</h4>
                     <p class="{style.geosdiPromoBody}">
-                       Quest'applicazione è una versione minimale di web-gis realizzato con geo-platform.
+                       Quest'applicazione è una versione minimale di un web-gis realizzato con geo-platform.
                         <br />
                     </p>
                 </div>                
