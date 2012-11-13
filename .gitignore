@@ -1,0 +1,5 @@
+/target/
+/gwt-unitCache/
+/war/baseapp/
+/war/WEB-INF/classes/
+/war/WEB-INF/deploy/

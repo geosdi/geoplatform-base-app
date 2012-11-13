@@ -47,12 +47,9 @@ public interface LoginImages extends ClientBundle {
 
     LoginImages INSTANCE = GWT.create(LoginImages.class);
 
-    @Source("maps.png")
-    ImageResource maps();
+    @Source("abac_logo.png")
+    ImageResource gFossLogo();
 
-//    @Source("security.gif")
-//    ImageResource securityLogin();
-
-    @Source("DPCPromo.png")
-    ImageResource DPCPromo();
+    @Source("GeoPlatformLogo.png")
+    ImageResource geoPlatformLogo();
 }

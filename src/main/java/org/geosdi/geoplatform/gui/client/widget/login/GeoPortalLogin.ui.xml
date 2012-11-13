@@ -11,7 +11,7 @@
         <div class="{style.geoSDIWrapper}" >
             <div class="{style.geoSDI-header-bar}" >
                 <div class="{style.header} {style.geoSDIContent} {style.geoSDIClearFix}">
-                    <g:Image stylePrimaryName="{style.logo}" resource='{resources.maps}'></g:Image>
+                    <g:Image stylePrimaryName="{style.logo}" resource='{resources.gFossLogo}'></g:Image>
                 </div>
             </div>
             <div class="{style.geoSDIMain} {style.geoSDIContent} {style.geoSDIClearFix}">
@@ -19,19 +19,11 @@
                 <gp:LoginWidget ui:field="loginWidget" eventOnSuccess="{geoPlatformEvents.getInitGeoPlatform}"/>
                 
                 <div class="{style.geosdiPromo}">
-                    <g:Image stylePrimaryName="{style.geosdiPromoIcon}" resource='{resources.DPCPromo}'></g:Image>
-                    <h4>Informazioni sul sistema SITDPC</h4>
+                    <g:Image stylePrimaryName="{style.geosdiPromoIcon}" resource='{resources.geoPlatformLogo}'></g:Image>
+                    <h4>Informazioni sull'applicazione Base App.</h4>
                     <p class="{style.geosdiPromoBody}">
-                        L'utilizzo di SITDPC &egrave; ammesso esclusivamente nell'ambito delle attivit&agrave; del Servizio Nazionale di Protezione Civile, attraverso apposito account non cedibile a terzi.
+                       Quest'applicazione è una versione minimale di web-gis realizzato con geo-platform.
                         <br />
-                        Medesima restrizione si applica anche alle stampe dei contenuti informativi del sistema. 
-                        <br />
-                        Non &egrave; consentito divulgare a terzi dati, informazioni ed immagini contenuti nel sistema, se non esplicitamente autorizzato dal Dipartimento della Protezione Civile.
-                        <br />
-                        <br />
-                        E' disponibile un account pubblico per la sola visualizzazione dei dati: user: 
-                        <b>demo</b> - password: 
-                        <b>demo</b>
                     </p>
                 </div>                
             </div>
@@ -41,7 +33,6 @@
             <div class="{style.geoSDI-Footer} {style.geoSDIContent} {style.geoSDIClearFix}">
                 <ul>
                     <li>© 2011-2012 
-                        <a href="http://www.protezionecivile.it" target="_blank">Protezione Civile Nazionale</a> - Ver 1.4 Build 1806 - powered by CNR IMAA 
                         <a href="http://www.geosdi.org" target="_blank">geoSDI</a> build with 
                         <a href="http://code.google.com/p/geo-platform/" target="_blank">geo-platform</a>
                     </li>
