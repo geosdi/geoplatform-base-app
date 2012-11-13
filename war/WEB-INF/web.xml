@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+    <!-- pick up all spring application contexts -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:applicationContext.xml</param-value>
+    </context-param>
+    
+    <!-- Activate @Production Spring Profile -->
+    <context-param>
+        <param-name>spring.profiles.active</param-name>
+        <param-value>prod</param-value>
+    </context-param>
+
+    <!-- spring context loader -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+    <listener>
+        <listener-class>org.geosdi.geoplatform.gui.server.oxm.SessionListenerProjectOXM</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>GeoPlatformConfiguration</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.GeoPlatformConfigurationImpl</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GeoPlatformConfiguration</servlet-name>
+        <url-pattern>/baseapp/GeoPlatformConfiguration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MapRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.MapRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MapRemote</servlet-name>
+        <url-pattern>/baseapp/MapRemote</url-pattern>
+    </servlet-mapping>
+	
+    
+    <servlet>
+        <servlet-name>ServerRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.ServerRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServerRemote</servlet-name>
+        <url-pattern>/baseapp/ServerRemote</url-pattern>
+    </servlet-mapping>
+        
+    <servlet>
+        <servlet-name>LayerRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.LayerRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LayerRemote</servlet-name>
+        <url-pattern>/baseapp/LayerRemote</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+        <servlet-name>ProjectOXMRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.ProjectOXMRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProjectOXMRemote</servlet-name>
+        <url-pattern>/baseapp/ProjectOXMRemote</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SecurityRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.SecurityRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecurityRemote</servlet-name>
+        <url-pattern>/baseapp/SecurityRemote</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UserRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.UserRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserRemote</servlet-name>
+        <url-pattern>/baseapp/UserRemote</url-pattern>
+    </servlet-mapping>    
+
+    <servlet>
+        <servlet-name>GeoPlatformOGCRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.GeoPlatformOGCRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GeoPlatformOGCRemote</servlet-name>
+        <url-pattern>/baseapp/GeoPlatformOGCRemote</url-pattern>
+    </servlet-mapping>
+	
+    <servlet>
+        <servlet-name>UploadProjectImportServlet</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.UploadProjectImportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadProjectImportServlet</servlet-name>
+        <url-pattern>/baseapp/UploadProjectImportServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Open proxy to circumvent cross-domain XmlHTTPRequest restrictions. -->
+    <servlet>
+        <servlet-name>GwtOpenlayersProxy</servlet-name>
+        <servlet-class>
+            org.gwtopenmaps.openlayers.server.GwtOpenLayersProxyServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GwtOpenlayersProxy</servlet-name>
+        <url-pattern>/gwtOpenLayersProxy/*</url-pattern>
+    </servlet-mapping>
+	
+    <servlet>
+        <servlet-name>Proxy</servlet-name>
+        <servlet-class>de.spieleck.servlets.ProxyServlet</servlet-class>
+        <init-param>
+            <param-name>remotePath</param-name>
+            <param-value>/http-bind/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>remoteServer</param-name>
+            <param-value>xmpp.geosdi.org</param-value>
+        </init-param>
+        <init-param>
+            <param-name>remotePort</param-name>
+            <param-value>7070</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Proxy</servlet-name>
+        <url-pattern>/http-bind</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>BaseApp.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

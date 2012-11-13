@@ -1,0 +1,155 @@
+/** Add css rules here for your application. */
+.x-loading-status {
+    background-image: url(baseapp/gp-images/loading.gif);
+}
+
+.x-status-ok {
+    background-image: url(baseapp/gp-images/ok.png);
+}
+
+.x-status-not-ok {
+    background-image: url(baseapp/gp-images/not_found.png);
+}
+
+.x-status-error {
+    background-image: url(baseapp/gp-images/error.png);
+}
+
+.olControlScaleLine {
+    left: 10px!important;
+    bottom:28px!important;
+    font-size: xx-small;
+    padding: 4px;
+    width: 140px;
+    background-color: #ddebfd;
+    background-image: url('baseapp/img/compass.gif');
+    background-repeat: no-repeat;
+    background-position: center right;
+    border: solid 1px #99bbe8;
+}
+
+.olControlScaleLineBottom {
+    border: solid 2px black;
+    border-bottom: none;
+    margin-top: -2px;
+    text-align: center;
+}
+
+.olControlScaleLineTop {
+    border: solid 2px black;
+    border-top: none;
+    text-align: center;
+}
+
+.olLayerGoogleCopyright {
+    display: none;
+    left: 2px;
+    bottom: 2px;
+}
+
+.olLayerGooglePoweredBy {
+    display: none;
+    left: 2px;
+    bottom: 15px;
+}
+
+.olControlMousePosition{
+    left: 10px!important;
+    bottom: 5px!important;
+    font-size: xx-small;
+    padding: 4px;
+    width: 140px;
+    background-color: #ddebfd;
+    color: #66BF25;
+    /*    background-image: url('geoportal/img/compass.gif');
+        background-repeat: no-repeat;
+        background-position: center right;*/
+    border: solid 1px #99bbe8;
+    font-family: "Courier New", Courier, monospace!important;
+    text-align:center;
+    vertical-align:middle;
+    font-weight: bold;
+}
+
+table.featureInfo,table.featureInfo td,table.featureInfo th {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    padding: .2em .1em;
+}
+
+table.featureInfo th {
+    padding: .2em .2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #d0dafd;
+    height: 30px!important;
+}
+
+table.featureInfo tr {
+    height: 20px!important;
+}
+
+table.featureInfo td {
+    background: #fff;
+    height: 20px!important;
+}
+
+table.featureInfo tr.odd td {
+    background: #eee;
+    height: 20px!important;
+}
+
+table.featureInfo caption {
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .2em .2em;
+}
+
+.project-box {
+    float: left !important;
+    width: 135px !important;
+    margin: 5px 5px 0 5px !important;
+    text-align: center !important;
+    height: 130px !important;
+    cursor: default !important;
+    color: #444 !important;
+    /*overflow: hidden !important;*/
+    padding-top: 4px !important;
+    border: none !important;
+}
+
+.overview-page {
+    background-color: white !important; 
+}
+
+.project-box div {
+    color: #1860A8 !important;
+}
+
+.project-box div,#project-box div a {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    font-family: tahoma, arial, sans-serif !important;
+}
+
+.project-box dt a {
+    border: 0 none !important;
+}
+
+.sample-over {
+    background: transparent url(baseapp/gp-images/sample-over.gif) no-repeat !important;
+}
+
+.project-box-select {
+    background: transparent url(baseapp/gp-images/sample-over.gif) no-repeat !important;
+	border-style:dashed !important;
+	border-color:gray !important;
+	height:125px !important;
+	width:135px !important;
+	margin:2px !important;
+}
