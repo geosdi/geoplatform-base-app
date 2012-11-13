@@ -599,6 +599,7 @@
     </dependencies>
     
     <build>
+        <defaultGoal>jetty:run</defaultGoal>
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
         <plugins>
             <plugin>
