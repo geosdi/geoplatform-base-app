@@ -35,7 +35,7 @@
  */
 package org.geosdi.geoplatform.gui.client.action;
 
-import org.geosdi.geoplatform.configurator.gui.GuiComponentIDs;
+import org.geosdi.geoplatform.initializer.GuiComponentIDs;
 import org.geosdi.geoplatform.gui.action.ToolbarAction;
 import org.geosdi.geoplatform.gui.action.ToolbarActionCreator;
 import org.geosdi.geoplatform.gui.action.ToolbarActionRegistar;
@@ -61,11 +61,11 @@ public class BaseAppActions {
 
         menuRegistar.put(GuiComponentIDs.USER_LOGOUT,
                 new MenuActionCreator() {
-                    @Override
-                    public MenuAction createAction() {
-                        return new UserLogout();
-                    }
-                });
+            @Override
+            public MenuAction createAction() {
+                return new UserLogout();
+            }
+        });
     }
 
     public static void addActionToolbar() {
@@ -73,20 +73,20 @@ public class BaseAppActions {
 
         toolbarRegistar.put(GuiComponentIDs.GEO_PLATFORM_INFO_APP,
                 new ToolbarActionCreator() {
-                    @Override
-                    public ToolbarApplicationAction createActionTool(
-                            GeoPlatformMap mapWidget) {
-                        return new BaseInfoApp();
-                    }
-                });
+            @Override
+            public ToolbarApplicationAction createActionTool(
+                    GeoPlatformMap mapWidget) {
+                return new BaseInfoApp();
+            }
+        });
 
         toolbarRegistar.put(GuiComponentIDs.CHANGE_BASE_LAYER,
                 new ToolbarActionCreator() {
-                    @Override
-                    public ToolbarAction createActionTool(
-                            GeoPlatformMap mapWidget) {
-                        return new ChangeBaseLayerAction(mapWidget);
-                    }
-                });
+            @Override
+            public ToolbarAction createActionTool(
+                    GeoPlatformMap mapWidget) {
+                return new ChangeBaseLayerAction(mapWidget);
+            }
+        });
     }
 }
