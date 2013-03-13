@@ -339,7 +339,7 @@
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>project-export-widget</artifactId>
-            <version>1.6-SNAPSHOT</version>
+            <version>${geoplatform-version}</version>
         </dependency>
 
         <dependency>
