@@ -70,8 +70,7 @@
         <cxf-version>2.7.3</cxf-version>
         <gwtOpenlayersVersion>0.9-SNAPSHOT</gwtOpenlayersVersion>
         <spring-version>3.2.1.RELEASE</spring-version>
-        <spring-asm-version>3.1.4.RELEASE</spring-asm-version>
-        <jaxws-version>2.2.8</jaxws-version>
+        <jaxws-version>2.2.9</jaxws-version>
         <guava-version>14.0</guava-version>
         <guice-version>3.0</guice-version>
         <codehaus-jra-version>1.0-alpha-4</codehaus-jra-version>
@@ -267,6 +266,12 @@
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-initializer</artifactId>
             <version>${geoplatform-version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>persistence-api</artifactId>
+                    <groupId>javax.persistence</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <dependency>
@@ -334,6 +339,12 @@
             <classifier>sources</classifier>
             <version>${geoplatform-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-ws-publish-connector</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
         
         <!-- GeoPlatform Project Export Module -->
         <dependency>
@@ -348,7 +359,7 @@
             <version>1.2.12</version>
         </dependency>
         
-          
+           
         <!-- =========================================================== -->
         <!-- ========================= GIN ============================= -->
         <!-- =========================================================== -->            
@@ -404,7 +415,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.0.7</version>
+            <version>1.0.9</version>
         </dependency>
 
         <!-- =========================================================== -->
@@ -531,13 +542,13 @@
         <dependency>
             <groupId>org.apache.ws.security</groupId>
             <artifactId>wss4j</artifactId>
-            <version>1.6.5</version>
+            <version>1.6.9</version>
         </dependency>
             
         <dependency>
             <groupId>org.apache.ws.xmlschema</groupId>
             <artifactId>xmlschema-core</artifactId>
-            <version>2.0.2</version>
+            <version>2.0.3</version>
         </dependency>
             
         <dependency>
@@ -554,13 +565,13 @@
         <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
-            <version>1.6.2</version>
+            <version>1.6.3</version>
         </dependency>
             
         <dependency>
             <groupId>org.apache.santuario</groupId>
             <artifactId>xmlsec</artifactId>
-            <version>1.5.1</version>
+            <version>1.5.3</version>
         </dependency>
 
         <!-- GeoAPI and its dependencies 
@@ -585,6 +596,12 @@
             <version>1.0-beta-2</version>
         </dependency>-->
 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.2.0.Final</version>
+        </dependency>
+
         <!-- SPRING -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -605,11 +622,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${spring-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-asm</artifactId>
-            <version>${spring-asm-version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

@@ -32,7 +32,7 @@
         <div class="{style.geosdi-footer-bar}">
             <div class="{style.geoSDI-Footer} {style.geoSDIContent} {style.geoSDIClearFix}">
                 <ul>
-                    <li>© 2011-2012 
+                    <li>© 2011-2013 
                         <a href="http://www.geosdi.org" target="_blank">geoSDI</a> build with 
                         <a href="http://code.google.com/p/geo-platform/" target="_blank">geo-platform</a>
                     </li>
