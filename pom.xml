@@ -68,7 +68,7 @@
         <gwtVersion>2.4.0</gwtVersion>
         <gxtVersion>2.2.5</gxtVersion>
         <cxf-version>2.7.3</cxf-version>
-        <gwtOpenlayersVersion>0.9-SNAPSHOT</gwtOpenlayersVersion>
+        <gwtOpenlayersVersion>0.9</gwtOpenlayersVersion>
         <spring-version>3.2.1.RELEASE</spring-version>
         <jaxws-version>2.2.9</jaxws-version>
         <guava-version>14.0</guava-version>
@@ -89,6 +89,12 @@
         <repository>
             <id>Hibernate Spatial repo</id>
             <url>http://www.hibernatespatial.org/repository</url>
+        </repository>
+
+        <repository>
+            <id>sonatype-oss-public</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
 
         <repository>
