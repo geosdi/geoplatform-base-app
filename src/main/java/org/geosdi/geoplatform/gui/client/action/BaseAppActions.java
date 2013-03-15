@@ -35,7 +35,6 @@
  */
 package org.geosdi.geoplatform.gui.client.action;
 
-import org.geosdi.geoplatform.initializer.GuiComponentIDs;
 import org.geosdi.geoplatform.gui.action.ToolbarAction;
 import org.geosdi.geoplatform.gui.action.ToolbarActionCreator;
 import org.geosdi.geoplatform.gui.action.ToolbarActionRegistar;
@@ -59,8 +58,9 @@ public class BaseAppActions {
 
         MenuActionRegistar menuRegistar = BasicGinInjector.MainInjector.getInstance().getMenuActionRegistar();
 
-        menuRegistar.put(GuiComponentIDs.USER_LOGOUT,
+        menuRegistar.put("userLogout",
                 new MenuActionCreator() {
+
             @Override
             public MenuAction createAction() {
                 return new UserLogout();
@@ -71,8 +71,9 @@ public class BaseAppActions {
     public static void addActionToolbar() {
         ToolbarActionRegistar toolbarRegistar = BasicGinInjector.MainInjector.getInstance().getToolbarActionRegistar();
 
-        toolbarRegistar.put(GuiComponentIDs.GEO_PLATFORM_INFO_APP,
+        toolbarRegistar.put("GeoPlatformInfoApp",
                 new ToolbarActionCreator() {
+
             @Override
             public ToolbarApplicationAction createActionTool(
                     GeoPlatformMap mapWidget) {
@@ -80,8 +81,9 @@ public class BaseAppActions {
             }
         });
 
-        toolbarRegistar.put(GuiComponentIDs.CHANGE_BASE_LAYER,
+        toolbarRegistar.put("changeBaseLayer",
                 new ToolbarActionCreator() {
+
             @Override
             public ToolbarAction createActionTool(
                     GeoPlatformMap mapWidget) {

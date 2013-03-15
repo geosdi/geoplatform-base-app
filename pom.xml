@@ -43,20 +43,6 @@
             </roles>
             <timezone>+1</timezone>
         </developer>
-        <developer>
-            <name>Vincenzo Monteverde</name>
-            <id>vincenzo.monteverde</id>
-            <email>vincenzo.monteverde@geosdi.org</email>
-            <organization>geoSDI</organization>
-            <roles>
-                <role>Java Developer</role>
-                <role>Project Management Committee (PMC) Member</role>
-            </roles>
-            <properties>
-                <openPGP>0xB25F4B38</openPGP>
-            </properties>
-            <timezone>+1</timezone>
-        </developer>
     </developers>
 
     <properties>
@@ -268,17 +254,6 @@
         </dependency>
 
         <!-- GEO-PLAFORM Resources -->
-        <dependency>
-            <groupId>org.geosdi</groupId>
-            <artifactId>geoplatform-initializer</artifactId>
-            <version>${geoplatform-version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>persistence-api</artifactId>
-                    <groupId>javax.persistence</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
         
         <dependency>
             <groupId>org.geosdi</groupId>
@@ -746,7 +721,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+                            <!-- goal>compile</goal -->
                         </goals>
                     </execution>
                     <execution>
