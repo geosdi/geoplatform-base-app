@@ -73,24 +73,27 @@ public class BaseApp implements EntryPoint {
     private void initGeoPlatformConfiguration() {
         GeoPlatformConfiguration.Util.getInstance().initGeoPlatformConfiguration(
                 new AsyncCallback<IGeoPlatformGlobal>() {
-                    @Override
-                    public void onSuccess(IGeoPlatformGlobal result) {
-                        GeoPlatformUtils.getInstance().setGlobalConfiguration(
-                                result);
-                        IStartupConfigurationStrategy strategy = result.getStrategy();
-                        if (strategy == null) {
-                            Dispatcher.forwardEvent(
-                                    GeoPlatformEvents.INIT_GEO_PLATFORM);
-                        } else {
-                            strategy.initGeoPlatformConfiguration();
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Throwable caught) {
-                        Info.display("Configuration Service Error",
-                                caught.getMessage());
-                    }
-                });
+            @Override
+            public void onSuccess(IGeoPlatformGlobal result) {
+                GeoPlatformUtils.getInstance().setGlobalConfiguration(
+                        result);
+                IStartupConfigurationStrategy strategy = result.getStrategy();
+                if (strategy == null) {
+                    Dispatcher.forwardEvent(
+                            GeoPlatformEvents.INIT_GEO_PLATFORM);
+                } else {
+                    strategy.initGeoPlatformConfiguration();
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable caught) {
+                Info.display("Configuration Service Error",
+                        caught.getMessage());
+            }
+
+        });
     }
+
 }

@@ -35,6 +35,16 @@
         <servlet-name>GeoPlatformConfiguration</servlet-name>
         <url-pattern>/baseapp/GeoPlatformConfiguration</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GeoPlatformService</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.GeoPlatformServiceImpl</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GeoPlatformService</servlet-name>
+        <url-pattern>/baseapp/GeoPlatformService</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>MapRemote</servlet-name>

@@ -49,18 +49,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.6</java.version>
                 
-        <geoplatform-version>1.5.0</geoplatform-version>
+        <geoplatform-version>1.6-SNAPSHOT</geoplatform-version>
         
         <gwtVersion>2.4.0</gwtVersion>
         <gxtVersion>2.2.5</gxtVersion>
-        <cxf-version>2.7.3</cxf-version>
-        <gwtOpenlayersVersion>0.9</gwtOpenlayersVersion>
+        <cxf-version>2.7.4</cxf-version>
+        <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
         <spring-version>3.2.2.RELEASE</spring-version>
         <jaxws-version>2.2.9</jaxws-version>
         <guava-version>14.0</guava-version>
         <guice-version>3.0</guice-version>
         <codehaus-jra-version>1.0-alpha-4</codehaus-jra-version>
-        <slf4j-version>1.7.2</slf4j-version>
+        <slf4j-version>1.7.5</slf4j-version>
     </properties>
     
     <repositories>
@@ -523,7 +523,7 @@
         <dependency>
             <groupId>org.apache.ws.security</groupId>
             <artifactId>wss4j</artifactId>
-            <version>1.6.9</version>
+            <version>1.6.10</version>
         </dependency>
             
         <dependency>
