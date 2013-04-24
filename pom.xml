@@ -728,7 +728,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <!-- goal>compile</goal -->
+                             <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>
@@ -753,6 +753,7 @@
                     <webAppSourceDirectory>${basedir}/war</webAppSourceDirectory>
                     <webAppConfig>
                         <contextPath>/</contextPath>
+                        <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
                     </webAppConfig>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
