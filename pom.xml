@@ -49,7 +49,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.6</java.version>
                 
-        <geoplatform-version>1.6-SNAPSHOT</geoplatform-version>
+        <geoplatform-version>1.5-SNAPSHOT</geoplatform-version>
         
         <gwtVersion>2.5.1</gwtVersion>
         <gxtVersion>2.2.5</gxtVersion>
@@ -278,6 +278,18 @@
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-configuration</artifactId>
             <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <version>${geoplatform-version}</version>
+            <classifier>sources</classifier>
         </dependency>
         
         <dependency>
@@ -728,7 +740,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                             <goal>compile</goal>
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>

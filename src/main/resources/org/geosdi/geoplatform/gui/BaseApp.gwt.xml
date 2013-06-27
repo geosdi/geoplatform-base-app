@@ -7,8 +7,21 @@
     <inherits name='org.geosdi.geoplatform.gui.UserWidgetUI' />
     <inherits name='org.geosdi.geoplatform.gui.ProjectOXMWidgetUI' />
     <inherits name="org.geosdi.geoplatform.gui.XMPPWidgetUI" />
+    <inherits name="org.geosdi.geoplatform.gui.SecurityWidgetUI" />
+    
+    <inherits name="com.google.gwt.logging.Logging"/>
+    
+    <set-property name="gwt.logging.logLevel" value="INFO"/>          
+    <set-property name="gwt.logging.enabled" value="TRUE"/>            
+    <set-property name="gwt.logging.popupHandler" value="DISABLED" />  
+    
 
     <entry-point class='org.geosdi.geoplatform.gui.client.BaseApp' />
+    
+    <set-property name="gssm.presence" value="false"/>
+    <!--Possible values for security strategy: basic or cas-->
+    <set-property name="security.strategy" value="basic"/>
+    
     <source path="client" excludes="*/*Test*.java" />
     <source path="shared" />
 

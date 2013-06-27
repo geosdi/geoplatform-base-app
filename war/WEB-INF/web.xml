@@ -118,7 +118,7 @@
         <servlet-name>UploadProjectImportServlet</servlet-name>
         <url-pattern>/baseapp/UploadProjectImportServlet</url-pattern>
     </servlet-mapping>
-    
+   
     
     <!-- Open proxy to circumvent cross-domain XmlHTTPRequest restrictions. -->
     <servlet>
