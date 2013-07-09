@@ -8,6 +8,9 @@
     <inherits name='org.geosdi.geoplatform.gui.ProjectOXMWidgetUI' />
     <inherits name="org.geosdi.geoplatform.gui.XMPPWidgetUI" />
 
+    <!--Possible values for security strategy: basic or cas-->
+    <set-property name="security.strategy" value="basic"/>
+    
     <entry-point class='org.geosdi.geoplatform.gui.client.BaseApp' />
     <source path="client" excludes="*/*Test*.java" />
     <source path="shared" />

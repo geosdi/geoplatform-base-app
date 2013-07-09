@@ -266,8 +266,8 @@
             <groupId>org.geosdi</groupId>
             <artifactId>basic-widget</artifactId>
             <version>${geoplatform-version}</version>
-        </dependency>
-
+        </dependency>        
+        
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-api</artifactId>
@@ -277,6 +277,19 @@
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-configuration</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <classifier>sources</classifier>
             <version>${geoplatform-version}</version>
         </dependency>
         
@@ -728,7 +741,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                             <goal>compile</goal>
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>
