@@ -42,7 +42,7 @@ import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
 import org.geosdi.geoplatform.gui.client.MapWidgetEvents;
-import org.geosdi.geoplatform.gui.client.config.LayerModuleInjector;
+import org.geosdi.geoplatform.gui.client.config.MementoModuleInjector;
 import org.geosdi.geoplatform.gui.client.model.memento.save.IMementoSave;
 import org.geosdi.geoplatform.gui.client.widget.login.GeoPortalLogin;
 import org.geosdi.geoplatform.gui.client.widget.menu.MenuBarWidget;
@@ -100,7 +100,7 @@ public class BaseAppView extends GeoPlatformView {
             @Override
             public void onWindowClosing(Window.ClosingEvent closingEvent) {
                 String message = new String();
-                IMementoSave mementoSave = LayerModuleInjector.MainInjector.getInstance().getMementoSave();
+                IMementoSave mementoSave = MementoModuleInjector.MainInjector.getInstance().getMementoSave();
                 if (!mementoSave.isEmpty()) {
                     message = "Warning: There are unsaved operations on the tree. ";
                 }
