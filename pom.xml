@@ -52,7 +52,7 @@
         <geoplatform-version>1.6-SNAPSHOT</geoplatform-version>
         
         <gwtVersion>2.5.1</gwtVersion>
-        <gxtVersion>2.2.5</gxtVersion>
+        <gxtVersion>2.3.0-gwt22</gxtVersion>
         <cxf-version>2.7.4</cxf-version>
         <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
         <spring-version>3.2.3.RELEASE</spring-version>
@@ -318,9 +318,29 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-startup</artifactId>
+            <version>${geoplatform-version}</version>
+            <classifier>sources</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-memento-persistence</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
+        
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
@@ -728,7 +748,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                             <goal>compile</goal>
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>

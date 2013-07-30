@@ -16,7 +16,7 @@
     <import resource="applicationContext-LayerTreeMenu.xml" />
 	
     <bean name="strategy"
-          class="org.geosdi.geoplatform.gui.configuration.startup.StartupConfigurationLogIn">
+          class="org.geosdi.geoplatform.gui.client.startup.StartupConfigurationLogIn">
     </bean>
         
     <bean name="geoPlatformGlobal"

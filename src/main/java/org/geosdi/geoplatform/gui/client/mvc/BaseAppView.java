@@ -43,6 +43,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
 import org.geosdi.geoplatform.gui.client.MapWidgetEvents;
 import org.geosdi.geoplatform.gui.client.config.LayerModuleInjector;
+import org.geosdi.geoplatform.gui.client.config.MementoModuleInjector;
 import org.geosdi.geoplatform.gui.client.model.memento.save.IMementoSave;
 import org.geosdi.geoplatform.gui.client.widget.login.GeoPortalLogin;
 import org.geosdi.geoplatform.gui.client.widget.menu.MenuBarWidget;
@@ -96,17 +97,20 @@ public class BaseAppView extends GeoPlatformView {
     }
 
     private void addWindowClosingListener() {
-        this.handlerRegistration = Window.addWindowClosingHandler(new Window.ClosingHandler() {
+        this.handlerRegistration = Window.addWindowClosingHandler(
+                new Window.ClosingHandler() {
+
             @Override
             public void onWindowClosing(Window.ClosingEvent closingEvent) {
                 String message = new String();
-                IMementoSave mementoSave = LayerModuleInjector.MainInjector.getInstance().getMementoSave();
+                IMementoSave mementoSave = MementoModuleInjector.MainInjector.getInstance().getMementoSave();
                 if (!mementoSave.isEmpty()) {
                     message = "Warning: There are unsaved operations on the tree. ";
                 }
                 message += "Do you really want to leave the application?";
                 closingEvent.setMessage(message);
             }
+
         });
     }
 
@@ -120,4 +124,5 @@ public class BaseAppView extends GeoPlatformView {
         Dispatcher.forwardEvent(MapWidgetEvents.ATTACH_MAP_WIDGET);
         Dispatcher.forwardEvent(MapWidgetEvents.ATTACH_TOOLBAR);
     }
+
 }
