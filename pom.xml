@@ -51,7 +51,7 @@
         <geoplatform-version>1.6-SNAPSHOT</geoplatform-version>
         <gwtVersion>2.5.1</gwtVersion>
         <gxtVersion>2.3.0-gwt22</gxtVersion>
-        <cxf-version>2.7.4</cxf-version>
+        <cxf-version>2.7.6</cxf-version>
         <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
         <spring-version>3.2.3.RELEASE</spring-version>
         <jaxws-version>2.2.9</jaxws-version>
@@ -577,7 +577,7 @@
         <dependency>
             <groupId>org.apache.santuario</groupId>
             <artifactId>xmlsec</artifactId>
-            <version>1.5.3</version>
+            <version>1.5.5</version>
         </dependency>
 
         <!-- GeoAPI and its dependencies 
