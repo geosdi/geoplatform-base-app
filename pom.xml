@@ -53,7 +53,7 @@
         <gxtVersion>2.3.0-gwt22</gxtVersion>
         <cxf-version>2.7.6</cxf-version>
         <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
-        <spring-version>3.2.3.RELEASE</spring-version>
+        <spring-version>3.2.4.RELEASE</spring-version>
         <jaxws-version>2.2.9</jaxws-version>
         <guava-version>14.0.1</guava-version>
         <guice-version>3.0</guice-version>
@@ -298,6 +298,12 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>gp-wfst-widget</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>security-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
@@ -372,7 +378,7 @@
         <dependency>
             <groupId>com.google.gwt.inject</groupId>
             <artifactId>gin</artifactId>
-            <version>1.5.0</version>
+            <version>2.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.inject</groupId>
@@ -746,7 +752,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+                            <!--<goal>compile</goal>-->
                         </goals>
                     </execution>
                     <execution>
