@@ -298,12 +298,6 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
-            <artifactId>gp-wfst-widget</artifactId>
-            <version>${geoplatform-version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.geosdi</groupId>
             <artifactId>security-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>

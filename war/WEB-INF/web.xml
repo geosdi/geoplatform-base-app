@@ -64,15 +64,6 @@
         <servlet-name>ServerRemote</servlet-name>
         <url-pattern>/baseapp/ServerRemote</url-pattern>
     </servlet-mapping>
-        
-    <servlet>
-        <servlet-name>LayerRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.LayerRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LayerRemote</servlet-name>
-        <url-pattern>/baseapp/LayerRemote</url-pattern>
-    </servlet-mapping>
    
     <servlet>
         <servlet-name>ProjectOXMRemote</servlet-name>
