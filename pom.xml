@@ -298,6 +298,18 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>gp-wfst-widget</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geocoding-widget</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>security-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
@@ -362,7 +374,7 @@
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-resources</artifactId>
-            <version>2.13.1</version>
+            <version>1.2.12</version>
         </dependency>
         
            
