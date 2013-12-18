@@ -298,18 +298,6 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
-            <artifactId>gp-wfst-widget</artifactId>
-            <version>${geoplatform-version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.geosdi</groupId>
-            <artifactId>geocoding-widget</artifactId>
-            <version>${geoplatform-version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.geosdi</groupId>
             <artifactId>security-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
@@ -764,7 +752,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <!--<goal>compile</goal>-->
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>
