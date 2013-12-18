@@ -53,7 +53,7 @@
         <gxtVersion>2.3.0-gwt22</gxtVersion>
         <cxf-version>2.7.7</cxf-version>
         <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
-        <spring-version>3.2.5.RELEASE</spring-version>
+        <spring-version>4.0.0.RELEASE</spring-version>
         <jaxws-version>2.2.9</jaxws-version>
         <guava-version>15.0</guava-version>
         <guice-version>3.0</guice-version>
