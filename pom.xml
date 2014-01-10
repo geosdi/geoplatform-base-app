@@ -316,6 +316,12 @@
         
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>gp-wfst-widget</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-startup</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>

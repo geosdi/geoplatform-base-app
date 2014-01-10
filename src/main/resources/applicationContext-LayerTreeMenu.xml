@@ -46,7 +46,7 @@
                             <property name="order" value="2" />
                         </bean>
                         <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
-                            <property name="id" value="CREATE_VIEWPORT" />
+                            <property name="id" value="CREATE_FOLDER_VIEWPORT" />
                             <property name="text" value="Create Viewport" />
                             <property name="enabled" value="true" />
                             <property name="secure" value="false" />
@@ -196,7 +196,7 @@
                             <property name="order" value="6" />
                         </bean>
                         <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
-                            <property name="id" value="CREATE_VIEWPORT" />
+                            <property name="id" value="CREATE_LAYER_VIEWPORT" />
                             <property name="text" value="Create Viewport" />
                             <property name="enabled" value="true" />
                             <property name="secure" value="false" />
