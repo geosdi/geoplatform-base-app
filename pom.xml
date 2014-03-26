@@ -53,12 +53,12 @@
         <gxtVersion>2.3.0-gwt22</gxtVersion>
         <cxf-version>2.7.7</cxf-version>
         <gwtOpenlayersVersion>1.0-SNAPSHOT</gwtOpenlayersVersion>
-        <spring-version>4.0.0.RELEASE</spring-version>
-        <jaxws-version>2.2.9</jaxws-version>
+        <spring-version>4.0.2.RELEASE</spring-version>
+        <jaxws-version>2.2.11</jaxws-version>
         <guava-version>16.0.1</guava-version>
         <guice-version>3.0</guice-version>
         <codehaus-jra-version>1.0-alpha-4</codehaus-jra-version>
-        <slf4j-version>1.7.5</slf4j-version>
+        <slf4j-version>1.7.6</slf4j-version>
     </properties>
     
     <repositories>
@@ -758,7 +758,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+                            <!--<goal>compile</goal>-->
                         </goals>
                     </execution>
                     <execution>
