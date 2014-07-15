@@ -328,7 +328,7 @@
             <version>${geoplatform-version}</version>
         </dependency>
         
-        <dependency>
+<!--        <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
             <version>${geoplatform-version}</version>
@@ -338,7 +338,7 @@
             <artifactId>user-widget</artifactId>
             <classifier>sources</classifier>
             <version>${geoplatform-version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.geosdi</groupId>
