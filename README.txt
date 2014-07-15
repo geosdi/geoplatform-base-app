@@ -1,25 +1,3 @@
-[Italian Version]
-Per avviare Base App bisogna soddisfare alcuni prerequisiti.
-
-[Prerequisiti]
-1. Scaricare il codice dello stack dei servizi di geo-platform all'URL https://github.com/geosdi/geo-platform.
-
-2. Creare un database con estensione spaziale su PostgreSQL con nome 'gp'.
-
-3. Posizionarsi nella sottocartella %Geo_Platform_DIR%/geoplatform-services e compilare con il seguente comando: 
-  'mvn clean install -P wms,wfs' . Verranno eseguiti i test che andranno a riempire il databse e verrà creato il 
-  WAR dei servizi nel modulo %Geo_Platform_DIR%/geoplatform-services/geoplatform-ws-core/geoplatform-ws-webapp/target.
-
-4. Effettuare il deployment del WAR dei servizi su Apache Tomcat [Web container] su porta 8080 oppure in alternativa
-  è possibile lanciare lo stack dei servizi sfruttando jetty da %Geo_Platform_DIR%/geoplatform-services/geoplatform-ws-core/geoplatform-ws-webapp
-  con il seguente comando: 'mvn jetty:run -P wms,wfs'
-
-5. Dopo aver compilato l'applicazione %geoplatform-base-app% 'mvn clean install' è possibile lanciarla usando
-  %geoplatform-base-app% mvn jetty:run , l'applicazione sarà disponibile su localhost:9393
-
-[Autenticazione]
-Alla richiesta di login è possibile autenticarsi con i seguenti utenti (la password è uguale allo username): 'admin', 'user' e 'viewer'.
-
 [English Version]
 A preliminary operation to do before launch the GeoPlatform Base App is:
 
@@ -42,3 +20,32 @@ A preliminary operation to do before launch the GeoPlatform Base App is:
 
 [Authentication]
 You can login using the following users (the password is the same as the username): 'admin', 'user' and 'viewer'.
+
+[Adding functionalities]
+To add functionalities to the base app it is possible to follow the wiki guide (https://github.com/geosdi/geoplatform-base-app/wiki)
+[Guide](https://github.com/geosdi/geoplatform-base-app/wiki)
+
+[Italian Version]
+Per avviare Base App bisogna soddisfare alcuni prerequisiti.
+
+[Prerequisiti]
+1. Scaricare il codice dello stack dei servizi di geo-platform all'URL https://github.com/geosdi/geo-platform.
+
+2. Creare un database con estensione spaziale su PostgreSQL con nome 'gp'.
+
+3. Posizionarsi nella sottocartella %Geo_Platform_DIR%/geoplatform-services e compilare con il seguente comando: 
+  'mvn clean install -P wms,wfs' . Verranno eseguiti i test che andranno a riempire il databse e verrà creato il 
+  WAR dei servizi nel modulo %Geo_Platform_DIR%/geoplatform-services/geoplatform-ws-core/geoplatform-ws-webapp/target.
+
+4. Effettuare il deployment del WAR dei servizi su Apache Tomcat [Web container] su porta 8080 oppure in alternativa
+  è possibile lanciare lo stack dei servizi sfruttando jetty da %Geo_Platform_DIR%/geoplatform-services/geoplatform-ws-core/geoplatform-ws-webapp
+  con il seguente comando: 'mvn jetty:run -P wms,wfs'
+
+5. Dopo aver compilato l'applicazione %geoplatform-base-app% 'mvn clean install' è possibile lanciarla usando
+  %geoplatform-base-app% mvn jetty:run , l'applicazione sarà disponibile su localhost:9393
+
+[Autenticazione]
+Alla richiesta di login è possibile autenticarsi con i seguenti utenti (la password è uguale allo username): 'admin', 'user' e 'viewer'.
+
+[Aggiunta funzionalità]
+Per poter aggiungere funzionalità alla Base App è possibile seguire la nostra guida wiki [Guide](https://github.com/geosdi/geoplatform-base-app/wiki)
