@@ -217,7 +217,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
+    <dependencies>      
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
@@ -354,7 +354,7 @@
             <version>${geoplatform-version}</version>
         </dependency>
         
-<!--        <dependency>
+        <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
             <version>${geoplatform-version}</version>
@@ -365,7 +365,7 @@
             <artifactId>user-widget</artifactId>
             <classifier>sources</classifier>
             <version>${geoplatform-version}</version>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.geosdi</groupId>
@@ -583,7 +583,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+                            <!--<goal>compile</goal>-->
                         </goals>
                     </execution>
                     <execution>
