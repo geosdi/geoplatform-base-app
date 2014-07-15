@@ -99,7 +99,7 @@
     <servlet-mapping>
         <servlet-name>UserRemote</servlet-name>
         <url-pattern>/baseapp/UserRemote</url-pattern>
-    </servlet-mapping>    
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>GeoPlatformOGCRemote</servlet-name>
