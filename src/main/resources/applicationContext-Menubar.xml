@@ -17,6 +17,8 @@
             <list>
                 <ref bean="geoPlatform" />
                 <ref bean="widgets" />
+                <!--This is the ref to the mapOptions MenuBarCategory bean-->
+<!--                <ref bean="mapOptions" />-->
             </list>
         </property>
     </bean>
@@ -27,11 +29,26 @@
         <property name="enabled" value="true" />
         <property name="order" value="10" />
         <property name="tools">
-            <list>                
+            <list>            
+                <!--This is the ref to the Manage User bean menu item-->
+<!--                <ref bean="manageUsers" />
+                <ref bean="separatorAbout" />-->
                 <ref bean="aboutGeoPlatform" />
             </list>
         </property>
     </bean>
+    
+<!--    <bean name="mapOptions"
+              class="org.geosdi.geoplatform.gui.configuration.menubar.MenuBarCategory">
+        <property name="textKey" value="mapOptionsText" />
+        <property name="enabled" value="true" />
+        <property name="order" value="50" />
+        <property name="tools">
+            <list>
+                <ref bean="viewport" />
+            </list>
+        </property>
+    </bean>-->
 
     <bean name="widgets"
           class="org.geosdi.geoplatform.gui.configuration.menubar.MenuBarCategory">

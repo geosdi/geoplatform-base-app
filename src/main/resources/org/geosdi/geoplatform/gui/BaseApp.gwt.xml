@@ -4,7 +4,8 @@
     <inherits name='org.geosdi.geoplatform.gui.GeoPlatform' />
     <inherits name='org.geosdi.geoplatform.gui.MapWidgetUI' />
     <inherits name='org.geosdi.geoplatform.gui.LayerWidgetUI' />
-    <inherits name='org.geosdi.geoplatform.gui.UserWidgetUI' />
+    <!-- Inheriting the UserWidgetUI entry point -->
+    <!--<inherits name='org.geosdi.geoplatform.gui.UserWidgetUI' />-->
     <inherits name='org.geosdi.geoplatform.gui.ProjectOXMWidgetUI' />
     <inherits name="org.geosdi.geoplatform.gui.XMPPWidgetUI" />
     <inherits name="org.geosdi.geoplatform.gui.WFSWidgetUI" />
