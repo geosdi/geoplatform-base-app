@@ -23,7 +23,6 @@ You can login using the following users (the password is the same as the usernam
 
 [Adding functionalities]
 To add functionalities to the base app it is possible to follow the wiki guide (https://github.com/geosdi/geoplatform-base-app/wiki)
-[Guide](https://github.com/geosdi/geoplatform-base-app/wiki)
 
 [Italian Version]
 Per avviare Base App bisogna soddisfare alcuni prerequisiti.
@@ -48,4 +47,4 @@ Per avviare Base App bisogna soddisfare alcuni prerequisiti.
 Alla richiesta di login è possibile autenticarsi con i seguenti utenti (la password è uguale allo username): 'admin', 'user' e 'viewer'.
 
 [Aggiunta funzionalità]
-Per poter aggiungere funzionalità alla Base App è possibile seguire la nostra guida wiki [Guide](https://github.com/geosdi/geoplatform-base-app/wiki)
+Per poter aggiungere funzionalità alla Base App è possibile seguire la nostra guida wiki (https://github.com/geosdi/geoplatform-base-app/wiki)
