@@ -583,7 +583,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <!--<goal>compile</goal>-->
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                     <execution>
