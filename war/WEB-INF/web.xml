@@ -132,7 +132,7 @@
         </init-param>
         <init-param>
             <param-name>remoteServer</param-name>
-            <param-value>xmpp.geosdi.org</param-value>
+            <param-value>150.145.141.173</param-value>
         </init-param>
         <init-param>
             <param-name>remotePort</param-name>
