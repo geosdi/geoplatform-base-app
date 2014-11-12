@@ -30,6 +30,17 @@
     <listener>
         <listener-class>org.geosdi.geoplatform.gui.server.oxm.SessionListenerProjectOXM</listener-class>
     </listener>
+    
+    <servlet>
+        <servlet-name>xsrf</servlet-name>
+        <servlet-class>
+            com.google.gwt.user.server.rpc.XsrfTokenServiceServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>xsrf</servlet-name>
+        <url-pattern>/baseapp/xsrf</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>GeoPlatformConfiguration</servlet-name>
@@ -49,18 +60,6 @@
     <servlet-mapping>
         <servlet-name>GeoPlatformService</servlet-name>
         <url-pattern>/baseapp/GeoPlatformService</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>xsrf</servlet-name>
-        <servlet-class>
-            com.google.gwt.user.server.rpc.XsrfTokenServiceServlet
-        </servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>xsrf</servlet-name>
-        <url-pattern>/baseapp/xsrf</url-pattern>
     </servlet-mapping>
 
     <servlet>
