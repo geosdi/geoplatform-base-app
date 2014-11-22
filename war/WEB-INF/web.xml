@@ -19,7 +19,7 @@
     
     <context-param>
         <param-name>gwt.xsrf.session_cookie_name</param-name>
-        <param-value>JSESSIONID</param-value>
+        <param-value>GEOSDI_COOKIE</param-value>
     </context-param>
 
     <!-- spring context loader -->
