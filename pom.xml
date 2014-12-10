@@ -52,7 +52,7 @@
         <gwtVersion>2.5.1</gwtVersion>
         <gxtVersion>2.3.0-gwt22</gxtVersion>
         <gwtOpenlayersVersion>1.1-SNAPSHOT</gwtOpenlayersVersion>
-        <guava-version>17.0</guava-version>
+        <guava-version>18.0</guava-version>
         <guice-version>3.0</guice-version>
     </properties>
     
@@ -214,6 +214,14 @@
                 <scope>import</scope>
                 <version>${geoplatform-version}</version>
             </dependency>
+            
+<!--            <dependency>
+                <groupId>org.geosdi</groupId>
+                <artifactId>geoplatform-cxf-dependency</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${geoplatform-version}</version>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -445,6 +453,14 @@
                     <groupId>cglib</groupId>
                     <artifactId>cglib</artifactId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>hibernate-jpa-2.0-api</artifactId>
+                    <groupId>org.hibernate.javax.persistence</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>hibernate-core</artifactId>
+                    <groupId>org.hibernate</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
 
@@ -526,7 +542,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -559,7 +575,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>${gwtVersion}</version>
                 <configuration>
                     <inplace>true</inplace>
                     <module>org.geosdi.geoplatform.gui.BaseApp</module>
