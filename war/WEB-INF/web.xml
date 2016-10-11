@@ -8,15 +8,18 @@
     <!-- pick up all spring application contexts -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext.xml</param-value>
+        <param-value>
+            classpath*:applicationContext.xml,classpath:mapfish-spring-application-context.xml,
+            classpath:*-mapfish-spring-application-context-override.xml
+        </param-value>
     </context-param>
-    
+
     <!-- Activate @Production Spring Profile -->
     <context-param>
         <param-name>spring.profiles.active</param-name>
         <param-value>prod</param-value>
     </context-param>
-    
+
     <context-param>
         <param-name>gwt.xsrf.session_cookie_name</param-name>
         <param-value>GEOSDI_COOKIE</param-value>
@@ -26,11 +29,11 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    
+
     <listener>
         <listener-class>org.geosdi.geoplatform.gui.server.oxm.SessionListenerProjectOXM</listener-class>
     </listener>
-    
+
     <servlet>
         <servlet-name>xsrf</servlet-name>
         <servlet-class>
@@ -51,7 +54,7 @@
         <servlet-name>GeoPlatformConfiguration</servlet-name>
         <url-pattern>/baseapp/GeoPlatformConfiguration</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>GeoPlatformService</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.gwt.GeoPlatformServiceImpl</servlet-class>
@@ -70,8 +73,7 @@
         <servlet-name>MapRemote</servlet-name>
         <url-pattern>/baseapp/MapRemote</url-pattern>
     </servlet-mapping>
-	
-    
+
     <servlet>
         <servlet-name>ServerRemote</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.gwt.ServerRemoteImpl</servlet-class>
@@ -80,7 +82,7 @@
         <servlet-name>ServerRemote</servlet-name>
         <url-pattern>/baseapp/ServerRemote</url-pattern>
     </servlet-mapping>
-   
+
     <servlet>
         <servlet-name>ProjectOXMRemote</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.gwt.ProjectOXMRemoteImpl</servlet-class>
@@ -89,7 +91,7 @@
         <servlet-name>ProjectOXMRemote</servlet-name>
         <url-pattern>/baseapp/ProjectOXMRemote</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>SecurityRemote</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.gwt.SecurityRemoteImpl</servlet-class>
@@ -98,7 +100,7 @@
         <servlet-name>SecurityRemote</servlet-name>
         <url-pattern>/baseapp/SecurityRemote</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>UserRemote</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.gwt.UserRemoteImpl</servlet-class>
@@ -116,7 +118,7 @@
         <servlet-name>GeoPlatformOGCRemote</servlet-name>
         <url-pattern>/baseapp/GeoPlatformOGCRemote</url-pattern>
     </servlet-mapping>
-	
+
     <servlet>
         <servlet-name>UploadProjectImportServlet</servlet-name>
         <servlet-class>org.geosdi.geoplatform.gui.server.UploadProjectImportServlet</servlet-class>
@@ -125,8 +127,20 @@
         <servlet-name>UploadProjectImportServlet</servlet-name>
         <url-pattern>/baseapp/UploadProjectImportServlet</url-pattern>
     </servlet-mapping>
-    
-    
+
+    <servlet>
+        <servlet-name>gp.print</servlet-name>
+        <servlet-class>org.mapfish.print.servlet.MapPrinterServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/Users/glascaleia/codice/geoplatform-base-app/war/WEB-INF/config.yaml</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gp.print</servlet-name>
+        <url-pattern>/baseapp/pdf/*</url-pattern>
+    </servlet-mapping>
+
     <!-- Open proxy to circumvent cross-domain XmlHTTPRequest restrictions. -->
     <servlet>
         <servlet-name>GwtOpenlayersProxy</servlet-name>
@@ -138,7 +152,7 @@
         <servlet-name>GwtOpenlayersProxy</servlet-name>
         <url-pattern>/gwtOpenLayersProxy/*</url-pattern>
     </servlet-mapping>
-	
+
     <servlet>
         <servlet-name>Proxy</servlet-name>
         <servlet-class>de.spieleck.servlets.ProxyServlet</servlet-class>
@@ -159,7 +173,7 @@
         <servlet-name>Proxy</servlet-name>
         <url-pattern>/http-bind</url-pattern>
     </servlet-mapping>
-    
+
     <!-- Default page to serve -->
     <welcome-file-list>
         <welcome-file>BaseApp.html</welcome-file>

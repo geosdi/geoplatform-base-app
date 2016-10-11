@@ -47,21 +47,41 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.6</java.version>
-        <geoplatform-version>1.6-SNAPSHOT</geoplatform-version>
-        <gwtVersion>2.5.1</gwtVersion>
-        <gxtVersion>2.3.0-gwt22</gxtVersion>
+        <java.version>1.8</java.version>
+        <geoplatform-version>1.7-SNAPSHOT</geoplatform-version>
+        <gwtVersion>2.7.0</gwtVersion>
+        <gxtVersion>2.3.1a-gwt22</gxtVersion>
         <gwtOpenlayersVersion>1.1-SNAPSHOT</gwtOpenlayersVersion>
-        <guava-version>17.0</guava-version>
+        <guava-version>18.0</guava-version>
         <guice-version>3.0</guice-version>
     </properties>
-    
+
     <repositories>
         <!-- geoSDI -->
         <repository>
-            <id>geosdi</id>
-            <name>geoSDI Repository</name>
-            <url>http://repo.geosdi.org</url>
+            <id>geosdi-snapshots</id>
+            <name>repo.geosdi.org-snapshots</name>
+            <url>http://repo.geosdi.org/artifactory/libs-snapshot-local</url>
+        </repository>
+
+        <repository>
+            <id>geosdi-realese</id>
+            <name>repo.geosdi.org-releases</name>
+            <url>http://repo.geosdi.org/artifactory/libs-release-local</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <!-- Apache -->
+        <repository>
+            <id>maven2-repository.dev.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
 
         <!-- Hibernate Spatial -->
@@ -80,17 +100,6 @@
             <id>sonatype-oss-repo</id>
             <name>Sonatype Open Source maven snapshot repo</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-
-        <!-- Apache -->
-        <repository>
-            <id>maven2-repository.dev.java.net</id>
-            <name>Java.net Repository for Maven</name>
-            <url>http://download.java.net/maven/2/</url>
-            <layout>default</layout>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
 
         <repository>
@@ -128,25 +137,6 @@
             </snapshots>
         </repository>
 
-        <!-- JBoss 
-        <repository>
-            <id>jboss-public-repository-group</id>
-            <name>JBoss Public Repository Group</name>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-        </repository>-->
-        
-        <!-- Spring -->
-        <repository>
-            <id>spring-release</id>
-            <name>Spring Portfolio Release Repository</name>
-            <url>http://maven.springframework.org/release</url>
-        </repository>
-        <repository>
-            <id>spring-external</id>
-            <name>Spring Portfolio External Repository</name>
-            <url>http://maven.springframework.org/external</url>
-        </repository>
-
         <!-- OSGEO -->
         <repository>
             <id>opengeo</id>
@@ -157,15 +147,6 @@
             </snapshots>
         </repository>
 
-        <repository>
-            <id>osgeo</id>
-            <name>Open Source Geospatial Foundation Repository</name>
-            <url>http://download2.osgeo.org/webdav/geotools/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        
         <!-- TERRACOTTA -->
         <repository>
             <id>terracotta-repository</id>
@@ -175,28 +156,29 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
-       
+
         <repository>
             <url>http://oss.sonatype.org/content/repositories/sourceforge-releases</url>
             <id>sonatype-mirror</id>
             <layout>default</layout>
             <name>Repository for library including ehcache recent ones</name>
         </repository>
-        
+
         <!-- GWTQUERY-UI PLUGIN -->
         <repository>
             <id>gwtquery-ui-repository</id>
             <url>http://gwtquery-ui.googlecode.com/svn/mavenrepo</url>
         </repository>
-        
-        <!--Google API--> 
+
+        <!--Google API-->
         <repository>
             <id>google-releases</id>
             <name>Google Releases</name>
             <url>https://oss.sonatype.org/content/repositories/google-releases</url>
         </repository>
+
     </repositories>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -206,7 +188,7 @@
                 <scope>import</scope>
                 <version>${geoplatform-version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.geosdi</groupId>
                 <artifactId>geoplatform-spring-dependency</artifactId>
@@ -217,41 +199,48 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>      
+    <dependencies>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
             <version>${gwtVersion}</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-servlet</artifactId>
             <version>${gwtVersion}</version>
             <scope>runtime</scope>
         </dependency>
-        
+
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwtVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.google.web.bindery</groupId>
             <artifactId>requestfactory-server</artifactId>
             <version>${gwtVersion}</version>
             <scope>runtime</scope>
         </dependency>
-        
+
         <!-- Dependencies for GWT-2.3.0 Compilation -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.0.0.GA</version>
         </dependency>
-        
+
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api-sources</artifactId>
             <version>1.0.0.GA</version>
         </dependency>
-        
+
         <!-- GXT -->
         <dependency>
             <groupId>com.extjs</groupId>
@@ -274,7 +263,7 @@
         </dependency>
 
         <!-- GEO-PLAFORM Resources -->
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>basic-widget</artifactId>
@@ -292,7 +281,7 @@
             <artifactId>geoplatform-configuration</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-featureinfo</artifactId>
@@ -310,7 +299,7 @@
             <artifactId>map-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>security-widget</artifactId>
@@ -322,44 +311,44 @@
             <classifier>sources</classifier>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>layer-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>gp-wfst-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-startup</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-startup</artifactId>
             <version>${geoplatform-version}</version>
             <classifier>sources</classifier>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-memento-persistence</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>user-widget</artifactId>
@@ -369,10 +358,23 @@
 
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-print</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>geoplatform-print</artifactId>
+            <version>${geoplatform-version}</version>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-ws-publish-connector</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>
-        
+
         <!-- GeoPlatform Project Export Module -->
         <dependency>
             <groupId>org.geosdi</groupId>
@@ -383,13 +385,12 @@
         <dependency>
             <groupId>org.geosdi</groupId>
             <artifactId>geoplatform-resources</artifactId>
-            <version>1.2.12</version>
+            <version>1.2.12-gwt2.7.x</version>
         </dependency>
-        
-           
+
         <!-- =========================================================== -->
         <!-- ========================= GIN ============================= -->
-        <!-- =========================================================== -->            
+        <!-- =========================================================== -->
         <dependency>
             <groupId>com.google.gwt.inject</groupId>
             <artifactId>gin</artifactId>
@@ -405,17 +406,17 @@
             <artifactId>guice-assistedinject</artifactId>
             <version>${guice-version}</version>
         </dependency>
-               
+
         <!-- =========================================================== -->
         <!-- ======================== GUAVA =========================== -->
         <!-- =========================================================== -->
-            
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava-version}</version>
         </dependency>
-            
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava-gwt</artifactId>
@@ -504,7 +505,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
-      
+
 
         <!-- SCOPE TEST -->
         <dependency>
@@ -522,7 +523,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -530,7 +531,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <defaultGoal>jetty:run</defaultGoal>
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
@@ -541,15 +542,15 @@
                 <version>3.1</version>
                 <configuration>
                     <encoding>utf8</encoding>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
+                <version>2.6</version>
                 <configuration>
                     <warSourceExcludes>.gwt-tmp/**</warSourceExcludes>
                     <warSourceDirectory>war</warSourceDirectory>
@@ -559,16 +560,20 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>${gwtVersion}</version>
                 <configuration>
                     <inplace>true</inplace>
                     <module>org.geosdi.geoplatform.gui.BaseApp</module>
                     <runTarget>BaseApp.html</runTarget>
+                    <compileSourcesArtifacts>
+                        <compileSourcesArtifact>com.extjs:gxt</compileSourcesArtifact>
+                    </compileSourcesArtifacts>
                     <warSourceDirectory>war</warSourceDirectory>
                     <disableCastChecking>true</disableCastChecking>
                     <disableClassMetadata>true</disableClassMetadata>
                     <scanRemoteServiceRelativePathAnnotation>true</scanRemoteServiceRelativePathAnnotation>
                     <hostedWebapp>${basedir}/war</hostedWebapp>
+                    <incremental>false</incremental>
                     <extraJvmArgs>-XX:MaxPermSize=766M -Xmx1024M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
                 </configuration>
                 <executions>
@@ -583,7 +588,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+                            <!-- goal>compile</goal -->
                         </goals>
                     </execution>
                     <execution>
@@ -603,7 +608,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>7.5.2.v20111006</version>
+                <version>7.6.16.v20140903</version>
                 <configuration>
                     <webAppSourceDirectory>${basedir}/war</webAppSourceDirectory>
                     <webAppConfig>
@@ -629,11 +634,11 @@
                         <phase>clean</phase>
                         <configuration>
                             <tasks>
-                                <delete dir="war/WEB-INF/lib" />
-                                <delete dir="war/baseapp" />
-                                <delete dir="war/WEB-INF/deploy" />
-                                <delete dir="war/META-INF" />
-                                <delete dir="gwt-unitCache" />
+                                <delete dir="war/WEB-INF/lib"/>
+                                <delete dir="war/baseapp"/>
+                                <delete dir="war/WEB-INF/deploy"/>
+                                <delete dir="war/META-INF"/>
+                                <delete dir="gwt-unitCache"/>
                             </tasks>
                         </configuration>
                         <goals>

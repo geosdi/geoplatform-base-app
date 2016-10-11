@@ -1,0 +1,1681 @@
+#===========================================================================
+# allowed DPIs
+#===========================================================================
+dpis: [600, 300, 254, 190, 127, 72, 56]
+
+#===========================================================================
+# the allowed scales
+#===========================================================================
+scales:
+  - 200
+  - 2000
+  - 5000
+  - 10000
+  - 17000
+  - 20000
+  - 25000
+  - 34000
+  - 50000
+  - 100000
+  - 200000
+  - 273000
+  - 500000
+  - 1000000
+  - 2000000
+  - 4000000
+  - 6000000
+  - 8000000
+  - 10000000
+  - 12000000
+  - 14000000
+  - 16000000
+  - 18000000
+  - 20000000
+
+#===========================================================================
+# the list of allowed hosts
+#===========================================================================
+hosts:
+  - !localMatch
+    dummy: true
+  - !ipMatch
+    ip: 0.0.0.0
+    mask: 0.0.0.0
+  
+layouts:
+  #===========================================================================
+  A3 Landscape:
+  #===========================================================================
+    #-------------------------------------------------------------------------
+    mainPage:
+      pageSize: A3
+      landscape: true
+      rotation: false
+      marginLeft: 40
+      marginRight: 40
+      marginTop: 20
+      marginBottom: 20
+      items:
+        - !map
+          spacingAfter: 30
+          width: 1000
+          height: 630
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 100
+          absoluteY: 160
+          width: 100
+          items:
+            - !scalebar
+              maxSize: 150
+              type: bar_sub
+              intervals: 3
+              subIntervals: false
+              units: m
+              barSize: 5
+              lineWidth: 1
+              barDirection: up
+              textDirection: up
+              labelDistance: 3
+              font: Helvetica
+              fontSize: 12
+              fontColor: #FFFFFF
+              color: #000000
+              barBgColor: white
+              spacingAfter: 0
+              align: left
+              vertAlign: middle
+              backgroundColor: #FFFFFF
+        - !text
+          font: Arial
+          fontSize: 16
+          align: center
+          absoluteX: 130
+          absoluteY: 150
+          width: 100
+          text: '${mapTitle}'
+        - !text
+          font: Arial
+          fontSize: 12
+          align: center
+          absoluteX: 830
+          absoluteY: 150
+          width: 100
+          text: "${title}"
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 100
+          absoluteY: 110
+          width: 800
+          items:
+            - !text
+              font: Arial
+              fontSize: 14
+              align: left
+              absoluteX: 230
+              absoluteY: 750
+              width: 700
+              text: 'Scala [1:${scale}] ${now dd.MM.yyyy}'
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 30
+          absoluteY: 830
+          width: 800
+          items:
+            - !image
+              maxWidth: 200
+              maxHeight: 75
+              align: left
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 990
+          absoluteY: 80
+          width: 100
+          items:
+            - !image
+              maxWidth: 200
+              maxHeight: 50
+              align: left
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 870
+          absoluteY: 110
+          width: 220
+          items:
+            - !text
+              font: Arial
+              fontSize: 14
+              align: right
+              text: 'www.geosdi.org'
+        - !columns
+          # columns can have an absolute position. In that case, they need the 3 following fields:
+          absoluteX: 100
+          absoluteY: 80
+          width: 780
+          items:
+            - !text
+              font: Arial
+              fontSize: 11
+              text: 'NOTE: ${comment}'
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          config:
+            borderWidth: 0
+            cells:
+              - padding: 2
+          items:
+            - !legends
+               borders: false
+               inline: false
+               maxIconWidth: 0
+               maxIconHeight: 0
+               classIndentation: 20
+               layerSpace: 5
+               classSpace: 2
+               backgroundColor: #FFFFFF
+               layerFont: Helvetica
+               layerFontSize: 11
+               classFont: Helvetica
+               classFontSize: 8
+               fontEncoding: Cp1252
+
+    #===========================================================================
+  A4 Portrait:
+  #===========================================================================
+    mainPage:
+      pageSize: A4
+      landscape: false
+      items:
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 538
+              height: 778
+        - !columns
+          absoluteY: 161
+          absoluteX: 319
+          width: 250
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 319
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 319
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 319
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 319
+          width: 250
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 319
+          width: 250
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 900913"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 538
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 538
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 36
+          absoluteX: 31
+          width: 538
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          config:
+            borderWidth: 0
+            cells:
+              - padding: 2
+          items:
+            - !legends
+               borders: false
+               inline: false
+               maxIconWidth: 0
+               maxIconHeight: 0
+               classIndentation: 20
+               layerSpace: 5
+               classSpace: 2
+               backgroundColor: #FFFFFF
+               layerFont: Helvetica
+               layerFontSize: 11
+               classFont: Helvetica
+               classFontSize: 8
+               fontEncoding: Cp1252
+              
+              
+    #===========================================================================
+  A3 Portrait:
+  #===========================================================================
+    mainPage:
+      pageSize: A3
+      landscape: false
+      items:
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 785
+              height: 1126
+        - !columns
+          absoluteY: 161
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 566
+          width: 250
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 566
+          width: 250
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 3857"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 785
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 785
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 40
+          absoluteX: 31
+          width: 785
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          config:
+            borderWidth: 0
+            cells:
+              - padding: 2
+          items:
+            - !legends
+               borders: false
+               inline: false
+               maxIconWidth: 0
+               maxIconHeight: 0
+               classIndentation: 20
+               layerSpace: 5
+               classSpace: 2
+               backgroundColor: #FFFFFF
+               layerFont: Helvetica
+               layerFontSize: 11
+               classFont: Helvetica
+               classFontSize: 8
+               fontEncoding: Cp1252
+    #===========================================================================
+  A0 Portrait:
+  #===========================================================================
+    mainPage:
+      pageSize: A0
+      landscape: false
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 30
+          absoluteY: 3341
+          width: 2329
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 2327
+              height: 3307
+        - !columns
+          absoluteY: 161
+          absoluteX: 2108
+          width: 250
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 2108
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 2108
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 2108
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 2108
+          width: 250
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 2108
+          width: 250
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 2327
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 2327
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 40
+          absoluteX: 31
+          width: 2327
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+              
+    #===========================================================================
+  A1 Portrait:
+  #===========================================================================
+    mainPage:
+      pageSize: A1
+      landscape: false
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 30
+          absoluteY: 2354
+          width: 1625
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 1620
+              height: 2320
+        - !columns
+          absoluteY: 161
+          absoluteX: 1403
+          width: 250
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 1403
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 1403
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 1403
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 1403
+          width: 250
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 1403
+          width: 250
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 1620
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 1620
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 40
+          absoluteX: 31
+          width: 1620
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+    #===========================================================================
+  A2 Portrait:
+  #===========================================================================
+    mainPage:
+      pageSize: A2
+      landscape: false
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 30
+          absoluteY: 1654
+          width: 1140
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 1120
+              height: 1620
+        - !columns
+          absoluteY: 161
+          absoluteX: 905
+          width: 264
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 905
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 905
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 905
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 905
+          width: 264
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 905
+          width: 264
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 1136
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 1136
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 40
+          absoluteX: 31
+          width: 1136
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+              #===========================================================================
+  A4 Landscape:
+  #===========================================================================
+    mainPage:
+      pageSize: A4
+      landscape: true
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 30
+          absoluteY: 565
+          width: 790
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 786
+              height: 533
+        - !columns
+          absoluteY: 161
+          absoluteX: 566
+          width: 253
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 161
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 155
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 145
+          absoluteX: 566
+          width: 250
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 110
+          absoluteX: 566
+          width: 250
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 95
+          absoluteX: 566
+          width: 250
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 788
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 63
+          absoluteX: 31
+          width: 788
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 36
+          absoluteX: 31
+          width: 788
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+   #===========================================================================
+  A2 Landscape:
+  #===========================================================================
+    mainPage:
+      pageSize: A2
+      landscape: true
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 40
+          absoluteY: 1160
+          width: 1604
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 1600
+              height: 1100
+        - !columns
+          absoluteY: 205
+          absoluteX: 1377
+          width: 264
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 205
+          absoluteX: 1377
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 199
+          absoluteX: 1377
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 189
+          absoluteX: 1377
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 154
+          absoluteX: 1377
+          width: 264
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 139
+          absoluteX: 1377
+          width: 264
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 1602
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 1602
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 50
+          absoluteX: 41
+          width: 1602
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+   #===========================================================================
+  A1 Landscape:
+  #===========================================================================
+    mainPage:
+      pageSize: A1
+      landscape: true
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 40
+          absoluteY: 1655
+          width: 2304
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 2300
+              height: 1595
+        - !columns
+          absoluteY: 205
+          absoluteX: 2078
+          width: 264
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 205
+          absoluteX: 2078
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 199
+          absoluteX: 2078
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 189
+          absoluteX: 2078
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 154
+          absoluteX: 2078
+          width: 264
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 139
+          absoluteX: 2078
+          width: 264
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 2304
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 2303
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 50
+          absoluteX: 41
+          width: 2303
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+   #===========================================================================
+  A0 Landscape:
+  #===========================================================================
+    mainPage:
+      pageSize: A0
+      landscape: true
+      items:
+        - !legends
+         maxIconWidth: 8
+         maxIconHeight: 8
+         classIndentation: 20
+         layerSpace: 5
+         classSpace: 2
+         backgroundColor: #FFFFFF
+         layerFont: Helvetica
+         layerFontSize: 10
+         classFont: Helvetica
+         classFontSize: 8
+         fontEncoding: Cp1252
+        - !columns
+          # columns can have an absolute position. In that case, they need a width.
+          absoluteX: 40
+          absoluteY: 2344
+          width: 3255
+          config:
+            borderWidth: 0.3
+            cells:
+              - padding: 2
+          items:
+            - !map
+              width: 3250
+              height: 2283
+        - !columns
+          absoluteY: 205
+          absoluteX: 3028
+          width: 264
+          config:
+            borderWidthTop: 0.3
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 205
+          absoluteX: 3028
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${title}"
+              align: center
+              fontSize: 14
+              font: Helvetica-bold
+        - !columns
+          absoluteY: 199
+          absoluteX: 3028
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 189
+          absoluteX: 3028
+          width: 264
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "${mapTitle}"
+              align: center
+              fontSize: 12
+        - !columns
+          absoluteY: 154
+          absoluteX: 3028
+          width: 264
+          widths: [100,50]
+          config:
+            borderWidthLeft: 0.3
+            cells:
+              - padding-top: 5
+          items:
+            - !scalebar
+              maxSize: 100
+              type: line
+              units: m
+              vertAlign: middle
+              barBgColor: #FFFFFF
+            - !text
+              text: 'Scala [1:${scale}]'
+              align: left
+              fontSize: 6
+        - !columns
+          absoluteY: 139
+          absoluteX: 3028
+          width: 264
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "Projection information EPSG 4326"
+              align: left
+              fontSize: 6
+            - !image
+              maxWidth: 20
+              maxHeight: 20
+              align: right
+              vertAlign: middle
+              url: http://www.geosdi.org/logo-geoSDI.png
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 3254
+          config:
+            cells:
+              - padding: 5
+          items:
+            - !text
+              text: "\n \n "
+              backgroundColor: #FFFFFF
+              align: left
+              fontSize: 7
+              font: Helvetica-Oblique
+        - !columns
+          absoluteY: 89
+          absoluteX: 41
+          width: 3254
+          config:
+            borderWidthTop: 0.3
+            cells:
+              - padding: 5
+          items:
+             - !text
+              font: Arial
+              fontSize: 8
+              text: 'NOTE: ${comment}'
+              backgroundColor: #FFFFFF
+        - !columns
+          absoluteY: 50
+          absoluteX: 41
+          width: 3254
+          items:
+            - !text
+              text: '${now dd.MM.yyyy}'
+              backgroundColor: #FFFFFF
+              align: right
+              fontSize: 6
+
+      footer: *commonFooter
