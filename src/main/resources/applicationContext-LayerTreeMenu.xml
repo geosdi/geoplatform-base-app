@@ -52,6 +52,7 @@
                             <property name="secure" value="false" />
                             <property name="order" value="4" />
                         </bean>
+                        <ref bean="LAYER_BUILDER" />
                     </list>
                 </entry>
                 <entry key-ref="gpLeafMenu">

@@ -48,7 +48,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <geoplatform-version>1.7-SNAPSHOT</geoplatform-version>
+        <geoplatform-version>1.8-SNAPSHOT</geoplatform-version>
         <gwtVersion>2.7.0</gwtVersion>
         <gxtVersion>2.3.1a-gwt22</gxtVersion>
         <gwtOpenlayersVersion>1.1-SNAPSHOT</gwtOpenlayersVersion>
@@ -197,13 +197,13 @@
                 <version>${geoplatform-version}</version>
             </dependency>
             
-<!--            <dependency>
+            <dependency>
                 <groupId>org.geosdi</groupId>
                 <artifactId>geoplatform-cxf-dependency</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
                 <version>${geoplatform-version}</version>
-            </dependency>-->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -475,6 +475,24 @@
                     <artifactId>cglib</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.xml.fastinfoset</groupId>
+            <artifactId>FastInfoset</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>layer-builder-gwt</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>layer-builder-gwt</artifactId>
+            <classifier>sources</classifier>
+            <version>${geoplatform-version}</version>
         </dependency>
 
         <dependency>
