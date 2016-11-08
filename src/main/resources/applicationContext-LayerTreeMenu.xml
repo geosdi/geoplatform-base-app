@@ -52,6 +52,7 @@
                             <property name="secure" value="false" />
                             <property name="order" value="4" />
                         </bean>
+                        <ref bean="LAYER_BUILDER" />
                     </list>
                 </entry>
                 <entry key-ref="gpLeafMenu">
@@ -202,25 +203,20 @@
                             <property name="secure" value="false" />
                             <property name="order" value="7" />
                         </bean>
-                        <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
-                            <property name="id" value="EDIT_FEATURE" />
-                            <property name="text" value="Edit WFS Mode" />
-                            <property name="enabled" value="true" />
-                            <property name="secure" value="false" />
-                            <property name="order" value="8" />
-                        </bean>
+                        <ref bean="EDIT_FEATURE" />
+                        <ref bean="SHOW_FEATURES" />
                         <bean class="org.geosdi.geoplatform.gui.client.configuration.tree.tools.RefreshTimeClientTool">
                             <property name="id" value="REFRESH_TIME" />
                             <property name="enabled" value="true" />
                             <property name="secure" value="false" />
-                            <property name="order" value="9" />
+                            <property name="order" value="10" />
                         </bean>
                         <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
                             <property name="id" value="LAYER_PROPERTIES" />
                             <property name="text" value="Layer Properties" />
                             <property name="enabled" value="true" />
                             <property name="secure" value="false" />
-                            <property name="order" value="10" />
+                            <property name="order" value="11" />
                         </bean>
                     </list>
                 </entry>

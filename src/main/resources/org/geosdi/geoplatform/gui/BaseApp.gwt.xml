@@ -10,6 +10,7 @@
     <inherits name='org.geosdi.geoplatform.gui.ProjectOXMWidgetUI' />
     <inherits name="org.geosdi.geoplatform.gui.XMPPWidgetUI" />
     <inherits name="org.geosdi.geoplatform.gui.WFSWidgetUI" />
+    <inherits name="org.geosdi.geoplatform.gui.LayerBuilderWidgetUI" />
 
     <set-property name="gssm.presence" value="false"/>
     <!--Possible values for security strategy: basic or cas-->
