@@ -28,6 +28,7 @@
                 <ref bean="MeasureArea" />
                 <ref bean="toolbarSeparatorMeasure" />         
                 <ref bean="changeBaseLayer" />
+                <ref bean="streetView" />
                 <ref bean="rightToolbarElements" />
             </list>
         </property>
