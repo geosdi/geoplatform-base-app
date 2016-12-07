@@ -490,6 +490,18 @@
 
         <dependency>
             <groupId>org.geosdi</groupId>
+            <artifactId>csv-importer-gwt</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
+            <artifactId>file-importer-gwt</artifactId>
+            <version>${geoplatform-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.geosdi</groupId>
             <artifactId>streetview</artifactId>
             <version>${geoplatform-version}</version>
         </dependency>

@@ -12,6 +12,8 @@
     <inherits name="org.geosdi.geoplatform.gui.WFSWidgetUI" />
     <inherits name="org.geosdi.geoplatform.gui.LayerBuilderWidgetUI" />
     <inherits name="org.geosdi.geoplatform.gui.StreetViewWidgetUI" />
+    <inherits name="org.geosdi.geoplatform.gui.CSVImporterWidgetUI" />
+    <inherits name="org.geosdi.geoplatform.gui.FileImporterWidgetUI" />
 
 
     <set-property name="gssm.presence" value="false"/>
