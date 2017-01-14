@@ -153,6 +153,27 @@
         <url-pattern>/gwtOpenLayersProxy/*</url-pattern>
     </servlet-mapping>
 
+    <!-- File importer. -->
+    <servlet>
+        <servlet-name>UploadFileImporter</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.service.UploadFileImporterServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadFileImporter</servlet-name>
+        <url-pattern>/baseapp/UploadFileImporter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CSVImporterLoadSchema</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.service.servlet.CSVImporterLoadSchemaServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CSVImporterLoadSchema</servlet-name>
+        <url-pattern>/baseapp/CSVImporterLoadSchema</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>Proxy</servlet-name>
         <servlet-class>de.spieleck.servlets.ProxyServlet</servlet-class>
