@@ -27,6 +27,13 @@
                             <property name="secure" value="false" />
                             <property name="order" value="2" />
                         </bean>
+                        <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
+                            <property name="id" value="PROJECT_PROPERTIES" />
+                            <property name="text" value="Project Properties" />
+                            <property name="enabled" value="true" />
+                            <property name="secure" value="false" />
+                            <property name="order" value="3" />
+                        </bean>
                     </list>
                 </entry>
                 <entry key-ref="gpCompositeMenu">

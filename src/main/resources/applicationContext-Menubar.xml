@@ -33,6 +33,7 @@
                 <!--This is the ref to the Manage User bean menu item-->
 <!--                <ref bean="manageUsers" />
                 <ref bean="separatorAbout" />-->
+                <ref bean="manageProjects" />
                 <ref bean="aboutGeoPlatform" />
             </list>
         </property>
