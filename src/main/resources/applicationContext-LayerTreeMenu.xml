@@ -34,6 +34,13 @@
                             <property name="secure" value="false" />
                             <property name="order" value="3" />
                         </bean>
+                        <bean class="org.geosdi.geoplatform.gui.configuration.composite.menu.tools.TreeMenuClientTool">
+                            <property name="id" value="CLONE_PROJECT" />
+                            <property name="text" value="Clone Project" />
+                            <property name="enabled" value="true" />
+                            <property name="secure" value="false" />
+                            <property name="order" value="4" />
+                        </bean>
                     </list>
                 </entry>
                 <entry key-ref="gpCompositeMenu">
