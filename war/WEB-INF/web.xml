@@ -175,6 +175,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>LayerRemote</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.LayerRemoteImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LayerRemote</servlet-name>
+        <url-pattern>/baseapp/LayerRemote</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Proxy</servlet-name>
         <servlet-class>de.spieleck.servlets.ProxyServlet</servlet-class>
         <init-param>
