@@ -155,13 +155,13 @@
 
     <!-- File importer. -->
     <servlet>
-        <servlet-name>UploadFileImporter</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.service.UploadFileImporterServlet</servlet-class>
+        <servlet-name>FileImporter</servlet-name>
+        <servlet-class>org.geosdi.geoplatform.gui.server.service.servlet.FileImporterServlet</servlet-class>
         <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UploadFileImporter</servlet-name>
-        <url-pattern>/baseapp/UploadFileImporter</url-pattern>
+        <servlet-name>FileImporter</servlet-name>
+        <url-pattern>/baseapp/FileImporter</url-pattern>
     </servlet-mapping>
 
     <servlet>
