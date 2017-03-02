@@ -234,6 +234,7 @@
                             <property name="secure" value="false" />
                             <property name="order" value="11" />
                         </bean>
+                        <ref bean="GEOLOCATE_LAYER" />
                     </list>
                 </entry>
                 <entry key-ref="gpAllMenu">
