@@ -48,7 +48,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <geoplatform-version>1.9-SNAPSHOT</geoplatform-version>
+        <geoplatform-version>2.0-SNAPSHOT</geoplatform-version>
         <gwtVersion>2.10.0</gwtVersion>
         <gxtVersion>2.3.1a-gwt22</gxtVersion>
         <gwtOpenlayersVersion>1.2.0</gwtOpenlayersVersion>
