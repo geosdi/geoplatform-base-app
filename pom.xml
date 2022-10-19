@@ -50,7 +50,7 @@
         <java.version>11</java.version>
         <geoplatform-version>2.0-SNAPSHOT</geoplatform-version>
         <gwtVersion>2.10.0</gwtVersion>
-        <gxtVersion>2.3.1a-gwt22</gxtVersion>
+        <gxtVersion>2.3.2a-gwt210</gxtVersion>
         <gwtOpenlayersVersion>1.2.0</gwtOpenlayersVersion>
         <guava-gwt-version>31.1-jre</guava-gwt-version>
         <guava-version>31.1-jre</guava-version>
