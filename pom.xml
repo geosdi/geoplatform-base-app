@@ -49,8 +49,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
         <geoplatform-version>2.0-SNAPSHOT</geoplatform-version>
-        <gwtVersion>2.10.0</gwtVersion>
-        <gxtVersion>2.3.2a-gwt210</gxtVersion>
+        <gwt.version>2.10.0</gwt.version>
         <gwtOpenlayersVersion>1.2.0</gwtOpenlayersVersion>
         <guava-gwt-version>31.1-jre</guava-gwt-version>
         <guava-version>31.1-jre</guava-version>
@@ -121,6 +120,14 @@
         <dependencies>
             <dependency>
                 <groupId>org.geosdi</groupId>
+                <artifactId>geoplatform-gwt-dependency</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${geoplatform-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.geosdi</groupId>
                 <artifactId>geoplatform-slf4j-dependency</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
@@ -150,28 +157,24 @@
         <dependency>
             <groupId>org.gwtproject</groupId>
             <artifactId>gwt-user</artifactId>
-            <version>${gwtVersion}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.gwtproject</groupId>
             <artifactId>gwt-servlet</artifactId>
-            <version>${gwtVersion}</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>org.gwtproject</groupId>
             <artifactId>gwt-dev</artifactId>
-            <version>${gwtVersion}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.gwtproject.web.bindery</groupId>
             <artifactId>requestfactory-server</artifactId>
-            <version>${gwtVersion}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -192,7 +195,6 @@
         <dependency>
             <groupId>com.extjs</groupId>
             <artifactId>gxt</artifactId>
-            <version>${gxtVersion}</version>
         </dependency>
 
         <!-- GWT-OPENLAYERS -->
@@ -592,7 +594,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>${gwtVersion}</version>
+                <version>${gwt.version}</version>
                 <configuration>
                     <inplace>true</inplace>
                     <module>org.geosdi.geoplatform.gui.BaseApp</module>
