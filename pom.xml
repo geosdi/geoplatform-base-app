@@ -62,6 +62,9 @@
             <id>geosdi-snapshots</id>
             <name>repo.geosdi.org-snapshots</name>
             <url>https://repo.geosdi.org/artifactory/libs-snapshot-local</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
         </repository>
 
         <repository>
@@ -559,6 +562,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.extjs</groupId>
+            <artifactId>gxt</artifactId>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
@@ -599,9 +608,10 @@
                     <inplace>true</inplace>
                     <module>org.geosdi.geoplatform.gui.BaseApp</module>
                     <runTarget>BaseApp.html</runTarget>
-                    <compileSourcesArtifacts>
-                        <compileSourcesArtifact>com.extjs:gxt</compileSourcesArtifact>
-                    </compileSourcesArtifacts>
+<!--                    <compileSourcesArtifacts>-->
+<!--                        <compileSourcesArtifact>com.extjs:gxt</compileSourcesArtifact>-->
+<!--                    </compileSourcesArtifacts>-->
+
                     <warSourceDirectory>war</warSourceDirectory>
                     <disableCastChecking>true</disableCastChecking>
                     <disableClassMetadata>true</disableClassMetadata>
