@@ -48,7 +48,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <geoplatform-version>2.0-SNAPSHOT</geoplatform-version>
+        <geoplatform-version>1.9-SNAPSHOT</geoplatform-version>
         <gwt.version>2.10.0</gwt.version>
         <gwtOpenlayersVersion>1.2.0</gwtOpenlayersVersion>
         <guava-gwt-version>31.1-jre</guava-gwt-version>
@@ -619,6 +619,7 @@
                     <hostedWebapp>${basedir}/war</hostedWebapp>
                     <incremental>false</incremental>
                     <extraJvmArgs>-XX:MaxPermSize=766M -Xmx1024M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
+                    <sourceLevel>11</sourceLevel>
                 </configuration>
                 <executions>
                     <execution>
@@ -632,7 +633,7 @@
                         <id>compile</id>
                         <phase>compile</phase>
                         <goals>
-                            <goal>compile</goal>
+<!--                            <goal>compile</goal>-->
                         </goals>
                     </execution>
                     <execution>
@@ -677,13 +678,13 @@
                         <id>remove-build-files</id>
                         <phase>clean</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="war/WEB-INF/lib"/>
                                 <delete dir="war/baseapp"/>
                                 <delete dir="war/WEB-INF/deploy"/>
                                 <delete dir="war/META-INF"/>
                                 <delete dir="gwt-unitCache"/>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
