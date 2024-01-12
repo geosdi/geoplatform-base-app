@@ -74,23 +74,6 @@
         <url-pattern>/baseapp/GeoPlatformService</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>MapRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.MapRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>MapRemote</servlet-name>
-        <url-pattern>/baseapp/MapRemote</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ServerRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.ServerRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ServerRemote</servlet-name>
-        <url-pattern>/baseapp/ServerRemote</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>ProjectOXMRemote</servlet-name>
@@ -101,23 +84,7 @@
         <url-pattern>/baseapp/ProjectOXMRemote</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>SecurityRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.SecurityRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SecurityRemote</servlet-name>
-        <url-pattern>/baseapp/SecurityRemote</url-pattern>
-    </servlet-mapping>
 
-    <servlet>
-        <servlet-name>UserRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.UserRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UserRemote</servlet-name>
-        <url-pattern>/baseapp/UserRemote</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>GeoPlatformOGCRemote</servlet-name>
@@ -183,14 +150,6 @@
         <url-pattern>/baseapp/CSVImporterLoadSchema</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>LayerRemote</servlet-name>
-        <servlet-class>org.geosdi.geoplatform.gui.server.gwt.LayerRemoteImpl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LayerRemote</servlet-name>
-        <url-pattern>/baseapp/LayerRemote</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>Proxy</servlet-name>
