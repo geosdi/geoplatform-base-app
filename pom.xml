@@ -56,6 +56,13 @@
         <guice-version>5.1.0</guice-version>
     </properties>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>geosdi-realese</id>
+            <url>https://repo.geosdi.org/artifactory/libs-release-local</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <repositories>
         <!-- geoSDI -->
         <repository>
@@ -75,7 +82,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        
+
         <!-- Spring -->
         <repository>
             <id>repository.spring.release</id>
@@ -87,19 +94,19 @@
             <name>Spring Snapshot Repository</name>
             <url>https://repo.spring.io/snapshot</url>
         </repository>
-        
+
         <repository>
             <id>sonatype-oss-public</id>
             <name>Nexus Release Repository</name>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
-        
+
         <repository>
             <id>sonatype-oss-repo</id>
             <name>Sonatype Open Source maven snapshot repo</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
-      
+
         <repository>
             <id>boundlessgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
@@ -108,7 +115,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        
+
         <!-- GWTQUERY-UI PLUGIN -->
         <repository>
             <id>gwtquery-ui-repository</id>
@@ -369,11 +376,11 @@
         <!-- =========================================================== -->
         <!-- ========================= GIN ============================= -->
         <!-- =========================================================== -->
-<!--        <dependency>-->
-<!--            <groupId>com.google.gwt.inject</groupId>-->
-<!--            <artifactId>gin</artifactId>-->
-<!--            <version>2.1.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.gwt.inject</groupId>-->
+        <!--            <artifactId>gin</artifactId>-->
+        <!--            <version>2.1.2</version>-->
+        <!--        </dependency>-->
 
 
         <dependency>
@@ -399,11 +406,11 @@
             <version>${guava-version}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.google.guava</groupId>-->
-<!--            <artifactId>guava-gwt</artifactId>-->
-<!--            <version>${guava-gwt-version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.guava</groupId>-->
+        <!--            <artifactId>guava-gwt</artifactId>-->
+        <!--            <version>${guava-gwt-version}</version>-->
+        <!--        </dependency>-->
 
 
         <!-- =========================================================== -->
@@ -486,11 +493,11 @@
             <version>6.0.23.Final</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.codahale.metrics</groupId>-->
-<!--            <artifactId>metrics-httpclient</artifactId>-->
-<!--            <version>3.0.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.codahale.metrics</groupId>-->
+        <!--            <artifactId>metrics-httpclient</artifactId>-->
+        <!--            <version>3.0.2</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -498,11 +505,11 @@
             <version>2.13.4.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.codahale.metrics</groupId>-->
-<!--            <artifactId>metrics-healthchecks</artifactId>-->
-<!--            <version>3.0.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.codahale.metrics</groupId>-->
+        <!--            <artifactId>metrics-healthchecks</artifactId>-->
+        <!--            <version>3.0.2</version>-->
+        <!--        </dependency>-->
 
         <!-- SPRING -->
         <dependency>
@@ -585,15 +592,15 @@
                 <version>3.1</version>
                 <configuration>
                     <encoding>utf8</encoding>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
+                <version>3.4.0</version>
                 <configuration>
                     <warSourceExcludes>.gwt-tmp/**</warSourceExcludes>
                     <warSourceDirectory>war</warSourceDirectory>
@@ -608,9 +615,9 @@
                     <inplace>true</inplace>
                     <module>org.geosdi.geoplatform.gui.BaseApp</module>
                     <runTarget>BaseApp.html</runTarget>
-<!--                    <compileSourcesArtifacts>-->
-<!--                        <compileSourcesArtifact>com.extjs:gxt</compileSourcesArtifact>-->
-<!--                    </compileSourcesArtifacts>-->
+                    <!--                    <compileSourcesArtifacts>-->
+                    <!--                        <compileSourcesArtifact>com.extjs:gxt</compileSourcesArtifact>-->
+                    <!--                    </compileSourcesArtifacts>-->
 
                     <warSourceDirectory>war</warSourceDirectory>
                     <disableCastChecking>true</disableCastChecking>
@@ -618,7 +625,7 @@
                     <scanRemoteServiceRelativePathAnnotation>true</scanRemoteServiceRelativePathAnnotation>
                     <hostedWebapp>${basedir}/war</hostedWebapp>
                     <incremental>false</incremental>
-                    <extraJvmArgs>-XX:MaxPermSize=766M -Xmx1024M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
+                    <extraJvmArgs>-Xmx1024M -Xss1024k -Dgwt.nowarn.legacy.tools</extraJvmArgs>
                     <sourceLevel>11</sourceLevel>
                 </configuration>
                 <executions>
